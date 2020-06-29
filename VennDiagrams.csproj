@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\example.jpg" />
+    <None Remove="Images\icons8_help_60px_1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\example.jpg" />
+    <Resource Include="Images\icons8_help_60px_1.png" />
+  </ItemGroup>
+
+</Project>
