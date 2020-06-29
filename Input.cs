@@ -73,14 +73,12 @@ namespace VennDiagrams
             return false;
         }
 
-
         public bool OnlyValidateCharacters()
         {
             for (int i = 0; i < formula.Length; i++)
             {
                 if ("ABCU+*-'()".IndexOf(formula[i]) == -1)
                 {
-
                     errorType = "ERROR wrong character: " + formula[i];
                     return false;
                 }

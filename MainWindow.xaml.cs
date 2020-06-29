@@ -70,6 +70,10 @@ namespace VennDiagrams
                 Calculate calculate = new Calculate(input.Formula, simpleShapes);
                 ResultLeft.Data = calculate.Result;
             }
+            else
+            {
+                leftErrorBox.Text = input.ErrorType;
+            }
         }
 
         private void rightCalculateClick(object sender, RoutedEventArgs e)
@@ -81,6 +85,9 @@ namespace VennDiagrams
             {
                 Calculate calculate = new Calculate(input.Formula, simpleShapes);
                 ResultRight.Data = calculate.Result;
+            } else
+            {
+                rightErrorBox.Text = input.ErrorType;
             }
         }
 
