@@ -67,7 +67,7 @@ namespace VennDiagrams
         {
             if (String.IsNullOrEmpty(formula))
             {
-                errorType = "Empty formula";
+                errorType = "Empty input";
                 return true;
             }
             return false;
