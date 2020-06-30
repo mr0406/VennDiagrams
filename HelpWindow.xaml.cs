@@ -16,6 +16,7 @@ namespace VennDiagrams
     {
         public HelpWindow()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
             SetText();
         }

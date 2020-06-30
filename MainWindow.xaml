@@ -5,33 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VennDiagrams"
         mc:Ignorable="d"
-        Title="VennDiagrams" Height="1050" Width="1550" FontSize="25"
-        ResizeMode="NoResize">
+        Title="VennDiagrams" FontSize="22"
+        ResizeMode="NoResize" SizeToContent="WidthAndHeight">
     <Grid x:Name="mainGrid" >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="25"></ColumnDefinition>
-            <ColumnDefinition Width="700"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="700"></ColumnDefinition>
-            <ColumnDefinition Width="25"></ColumnDefinition>
+            <ColumnDefinition Width="550"></ColumnDefinition>
+            <ColumnDefinition Width="60"></ColumnDefinition>
+            <ColumnDefinition Width="550"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="25"></RowDefinition>
-            <RowDefinition Height="700"></RowDefinition>
-            <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="550"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Canvas Grid.Row="1" Grid.Column="2">
-            <Button x:Name="helpButton"  Canvas.Top="100"  Canvas.Left="0" Width="80" Height="80"  Click="helpClick">
+        <Canvas Grid.Row="0" Grid.Column="1">
+            <Button x:Name="helpButton" Click="helpClick" HorizontalAlignment="Center">
                 <Image Source="/Images/icons8_help_60px_1.png" ></Image>
             </Button>
         </Canvas>
 
-        <Canvas     x:Name="leftScreen"       Grid.Row="1" Grid.Column="1" ClipToBounds="true">
+        <Canvas     x:Name="leftScreen"       Grid.Row="0" Grid.Column="0" ClipToBounds="true">
             <Path Fill="DeepSkyBlue"  Name="ResultLeft" >
                 <Path.Data>
                     <CombinedGeometry/>
@@ -39,34 +34,34 @@
             </Path>
             <Path Stroke="Black" StrokeThickness="3">
                 <Path.Data>
-                    <RectangleGeometry Rect="50,50,600,600" x:Name="rectangleLeft"/>
+                    <RectangleGeometry Rect="25,25,500,500" x:Name="rectangleLeft"/>
                 </Path.Data>
             </Path>
             <Path Stroke="Black" StrokeThickness="3">
                 <Path.Data>
-                    <EllipseGeometry RadiusX="150" RadiusY="150"  x:Name="ACircleLeft"/>
+                    <EllipseGeometry RadiusX="120" RadiusY="120"  x:Name="ACircleLeft"/>
                 </Path.Data>
             </Path>
             <Path Stroke="Black" StrokeThickness="3">
                 <Path.Data>
-                    <EllipseGeometry RadiusX="150" RadiusY="150"  x:Name="BCircleLeft"/>
+                    <EllipseGeometry RadiusX="120" RadiusY="120"  x:Name="BCircleLeft"/>
                 </Path.Data>
             </Path>
             <Path Stroke="Black" StrokeThickness="3">
                 <Path.Data>
-                    <EllipseGeometry RadiusX="150" RadiusY="150"  x:Name="CCircleLeft"/>
+                    <EllipseGeometry RadiusX="120" RadiusY="120"  x:Name="CCircleLeft"/>
                 </Path.Data>
             </Path>
-            <TextBlock  Canvas.Left="600" Canvas.Top="65"  FontSize="35">U</TextBlock>
-            <TextBlock  Canvas.Left="340" Canvas.Top="150" FontSize="35">A</TextBlock>
-            <TextBlock  Canvas.Left="490" Canvas.Top="420" FontSize="35">B</TextBlock>
-            <TextBlock  Canvas.Left="180" Canvas.Top="420" FontSize="35">C</TextBlock>
+            <TextBlock  Canvas.Left="470" Canvas.Top="45"  FontSize="35">U</TextBlock>
+            <TextBlock  Canvas.Left="262" Canvas.Top="100" FontSize="35">A</TextBlock>
+            <TextBlock  Canvas.Left="375" Canvas.Top="350" FontSize="35">B</TextBlock>
+            <TextBlock  Canvas.Left="150" Canvas.Top="350" FontSize="35">C</TextBlock>
         </Canvas>
-        <TextBlock  x:Name="leftErrorBox"     Grid.Row="2" Grid.Column="1" TextAlignment="Center" Foreground="Red"/>
-        <TextBox    x:Name="leftFormula"      Grid.Row="3" Grid.Column="1" />
-        <Button     x:Name="leftCalculate"    Grid.Row="4" Grid.Column="1" Content="Calculate" Width="200" Click="leftCalculateClick"/>
+        <TextBlock  x:Name="leftErrorBox"     Grid.Row="1" Grid.Column="0" TextAlignment="Center" Foreground="Red" Margin="20,0,20,0"/>
+        <TextBox    x:Name="leftFormula"      Grid.Row="2" Grid.Column="0" Margin="20,0,20,0"/>
+        <Button     x:Name="leftCalculate"    Grid.Row="3" Grid.Column="0" Content="Calculate" Width="180" Margin="20,0,20,10" Click="leftCalculateClick"/>
 
-        <Canvas     x:Name="rightScreen"      Grid.Row="1" Grid.Column="3" ClipToBounds="true">
+        <Canvas     x:Name="rightScreen"      Grid.Row="0" Grid.Column="2" ClipToBounds="true">
             <Path Fill="Orange"  Name="ResultRight" >
                 <Path.Data>
                     <CombinedGeometry/>
@@ -74,33 +69,33 @@
             </Path>
             <Path Stroke="Black" StrokeThickness="3">
                 <Path.Data>
-                    <RectangleGeometry Rect="50,50,600,600" x:Name="rectangleRight"/>
+                    <RectangleGeometry Rect="25,25,500,500" x:Name="rectangleRight"/>
                 </Path.Data>
             </Path>
             <Path Stroke="Black" StrokeThickness="3">
                 <Path.Data>
-                    <EllipseGeometry RadiusX="150" RadiusY="150"  x:Name="ACircleRight"/>
+                    <EllipseGeometry RadiusX="120" RadiusY="120"  x:Name="ACircleRight"/>
                 </Path.Data>
             </Path>
             <Path Stroke="Black" StrokeThickness="3">
                 <Path.Data>
-                    <EllipseGeometry RadiusX="150" RadiusY="150"  x:Name="BCircleRight"/>
+                    <EllipseGeometry RadiusX="120" RadiusY="120"  x:Name="BCircleRight"/>
                 </Path.Data>
             </Path>
             <Path Stroke="Black" StrokeThickness="3">
                 <Path.Data>
-                    <EllipseGeometry RadiusX="150" RadiusY="150"  x:Name="CCircleRight"/>
+                    <EllipseGeometry RadiusX="120" RadiusY="120"  x:Name="CCircleRight"/>
                 </Path.Data>
             </Path>
-            <TextBlock  Canvas.Left="600" Canvas.Top="65"  FontSize="35">U</TextBlock>
-            <TextBlock  Canvas.Left="340" Canvas.Top="150" FontSize="35">A</TextBlock>
-            <TextBlock  Canvas.Left="490" Canvas.Top="420" FontSize="35">B</TextBlock>
-            <TextBlock  Canvas.Left="180" Canvas.Top="420" FontSize="35">C</TextBlock>
+            <TextBlock  Canvas.Left="470" Canvas.Top="45"  FontSize="35">U</TextBlock>
+            <TextBlock  Canvas.Left="262" Canvas.Top="100" FontSize="35">A</TextBlock>
+            <TextBlock  Canvas.Left="375" Canvas.Top="350" FontSize="35">B</TextBlock>
+            <TextBlock  Canvas.Left="150" Canvas.Top="350" FontSize="35">C</TextBlock>
         </Canvas>
-        <TextBlock  x:Name="rightErrorBox"    Grid.Row="2" Grid.Column="3" TextAlignment="Center" Foreground="Red"/>
-        <TextBox    x:Name="rightFormula"     Grid.Row="3" Grid.Column="3" />
-        <Button     x:Name="rightCalculate"   Grid.Row="4" Grid.Column="3" Content="Calculate" Width="200" Click="rightCalculateClick"/>
+        <TextBlock  x:Name="rightErrorBox"    Grid.Row="1" Grid.Column="2" TextAlignment="Center" Foreground="Red" Margin="20,0,20,0"/>
+        <TextBox    x:Name="rightFormula"     Grid.Row="2" Grid.Column="2" Margin="20,0,20,0" />
+        <Button     x:Name="rightCalculate"   Grid.Row="3" Grid.Column="2" Content="Calculate" Width="180" Margin="20,0,20,10" Click="rightCalculateClick"/>
 
-        <TextBlock  Grid.Row="5" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Bottom"> Marcin Rakowski @ 2020</TextBlock>
+        <TextBlock  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="20" Padding="10"> Marcin Rakowski @2020</TextBlock>
     </Grid>
 </Window>

@@ -21,6 +21,7 @@ namespace VennDiagrams
 
         public MainWindow()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
             CirclesCentersSet();
             SimpleShapesDictionarySet();
@@ -28,9 +29,9 @@ namespace VennDiagrams
 
         public void CirclesCentersSet()
         {
-            int xCenter = 350;
-            int yCenter = 350;
-            double d = 100;
+            int xCenter = 275;
+            int yCenter = 275;
+            double d = 80;
             double x = Math.Sqrt(3 * Math.Pow(d, 2) / 4);
 
             int Ax = xCenter;
